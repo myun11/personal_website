@@ -1,22 +1,22 @@
 import './App.css';
+// import WorldsDataSummary from './WorldsDataSummary';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        sersdddddddd
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <WorldsDataSummary/> */}
+        <h1>Checklist</h1> <br/>
+        <h2>Requires thinking</h2><br/>
+        Self Introduction - Hello, my name is Michael. Smaller font below: Full Stack Developer<br/>
+        About Me - <br/>
+        Skills<br/>
+        Goals<br/>
+
+        <h2>Trivial</h2><br/>
+        Socials - LinkedIn | <br/>
+        Send me an email with boxes for first name, last name, email, <br/>
+
+        Get security certificate
     </div>
   );
 }
