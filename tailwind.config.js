@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'vector': "url('./public/vector-background.jpg')",
+      },
       colors: {
         gray: {
           200: "#D5DAE1"
