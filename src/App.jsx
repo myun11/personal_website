@@ -16,11 +16,11 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home2/>} />
             {/*  */}
-          <Route path="/about" element-={<About/>} /> 
+          <Route path="/about" element={<About/>} /> 
             {/* personal info, my timeline, undergrad, future prospects, current interests,*/}
-          <Route path="/projects" element-={<Projects/>} />
+          <Route path="/projects" element={<Projects/>} />
             {/* gallery of projects */}
-          <Route path="/contacts" element-={<Contacts/>} />
+          <Route path="/contacts" element={<Contacts/>} />
             {/* linkedin, github, email, insta */}
         </Routes>
       </Router>
