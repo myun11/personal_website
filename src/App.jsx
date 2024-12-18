@@ -10,7 +10,7 @@ import Navbar from './components/Navbar';
 const App = () => {
   
   return (
-    <main className="bg-vector bg-cover w-screen h-screen relative">
+    <main className="bg-slate-800 bg-cover w-screen h-screen relative">
       <div className="">
         <div className="flex flex-col justify-center items-start text-white px-8 py-4">
           <h1 className="text-4xl font-bold">Michael Yun</h1>
