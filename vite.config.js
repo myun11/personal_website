@@ -6,7 +6,8 @@ import tailwindcss from 'tailwindcss'
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.glb'],
-  base: "https://michaelyun.dev/",
+  // base: "https://michaelyun.dev/",
+  base:"/personal_website",
   build: {
     outDir: 'dist'
   },
