@@ -16,7 +16,7 @@ const App = () => {
           <h1 className="text-4xl font-bold">Michael Yun</h1>
           <h2 className="text-xl font-medium mt-2">Full Stack Developer</h2>
           <p className="text-base mt-4">
-            I enjoy building applications and optimizing workflow.
+            I enjoy building applications and optimizing workflow. I specialize in React and AWS.
           </p>
         </div>
         <div>
