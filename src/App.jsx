@@ -13,7 +13,7 @@ import React from 'react'
 const App = () => {
   
   return (
-    <main className="bg-blue-950 w-screen h-screen">
+    <main className="bg-blue-950">
       <div className="">
         <div className="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
           <h1 className="text-4xl font-bold">Michael Yun</h1>
@@ -72,7 +72,7 @@ const App = () => {
             </Tooltip>
           </span>
         </div>
-        <div className ="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
+        <div className="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
           <h2 className="text-xl font-medium mt-2 uppercase">About</h2>
           <h3 className="text-base mt-4 text-gray-400 text-start">
             I'm a dedicated US citizen software engineer with a strong focus on creating 
@@ -82,7 +82,7 @@ const App = () => {
           </h3>
           <h3 className="text-base mt-4 text-gray-400 text-start">
             I come from a statistics and computer science background, specializing in technologies like
-            ReactJS, AWS, ASP.NET Core, and R while equipped with a solid understanding of handling data. 
+            React.js, AWS, ASP.NET Core, and R while equipped with a solid understanding of handling data. 
             In the past, I've built scalable and reusable applications and 
             dashboards which provided business insights to my teammates while saving them time and resources.  
           </h3>
@@ -91,8 +91,7 @@ const App = () => {
             and improving myself at the gym.
           </h3>
         </div>
-
-        <div className ="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
+        <div className="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
           <h2 className="text-xl font-medium mt-2 uppercase">Experience</h2>
           2021 - 2022
           Full Stack Developer - AttainX
@@ -100,10 +99,16 @@ const App = () => {
 
         <div className ="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
           <h2 className="text-xl font-medium mt-2 uppercase">Projects</h2>
+          2024
+          sumeru.dev - Genshin Impact Web App
         </div>
 
         <div className ="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
           <h2 className="text-xl font-medium mt-2 uppercase">Education</h2>
+          2017 - 2021
+          Bachelor of Science - Statistics
+          University of Illinois Urbana-Champaign
+          
         </div>
         <div>
           {/* <Router>
