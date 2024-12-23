@@ -95,12 +95,18 @@ const App = () => {
           <h2 className="text-xl font-medium mt-2 uppercase">Experience</h2>
           2021 - 2022
           Full Stack Developer - AttainX
+          React - AWS - Node.js - .NET - MaterialUI
         </div>
 
         <div className ="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
           <h2 className="text-xl font-medium mt-2 uppercase">Projects</h2>
           2024
           sumeru.dev - Genshin Impact Web App
+          React - Tailwind CSS - Regex
+
+          2021
+          Statistical Consultant - University of Illinois
+          R - RShiny - ggplot2 - dplyr - tidyverse - rpart - corrplot
         </div>
 
         <div className ="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
