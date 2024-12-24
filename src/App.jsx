@@ -8,6 +8,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import Link from '@mui/material/Link';
 import ShortcutIcon from '@mui/icons-material/ArrowOutward';
 import './App.css'
+import Bubble from './components/Bubble';
 
 import React from 'react'
 
@@ -24,17 +25,8 @@ const App = () => {
   //   }
   // ]
   
-  // Helper jsx function for displaying different technologies in bubbles
-  const Bubble = (tech) => {
-    return(
-      <div className = "rounded-xl bg-teal-900 text-gray-400">
-        {tech}
-      </div>
-    )
-  }
-
   return (
-    <main className="bg-blue-950">
+    <main className="bg-slate-900">
       <div className="">
         <div className="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
           <h1 className="text-4xl font-bold">Michael Yun</h1>
@@ -109,56 +101,74 @@ const App = () => {
           </h3>
           <h3 className="text-base mt-4 text-gray-400 text-start">
             In my free time, I enjoy cosplaying with my friends, tinkering with 3D print and Arduino-based cosplay props,
-            and improving myself at the gym.
+            and chasing goals at the gym.
           </h3>
         </div>
         <div className="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
           <h2 className="text-xl font-medium mt-2 uppercase py-4">Experience</h2>
-          <p className="text-sm text-gray-400">2023 - Present</p>
-          <h2 className="">
-            <Tooltip title="Company Link">
-              <Link
-                href="https://eliteprep.com/"
-                target="_blank"
-                rel="noopener"
-                underline="none"
-              >
-                <p className="text-gray-100">SAT/AP College Prep Tutor
-                <ShortcutIcon fontSize="small" sx={{
-                  color: 'white',
-                  '&:hover': { color: 'lightgray' }
-                }}/>
-                </p>
-                
-              </Link>
-            </Tooltip>
-          </h2>
-          
-          <p className="text-sm text-gray-400">2021 - 2022</p>
-          <h2 className="">
-            <Tooltip title="Company Link">
-              <Link
-                href="https://attainx.com/"
-                target="_blank"
-                rel="noopener"
-                underline="none"
-              >
-                <p className="text-gray-100">Full Stack Developer - AttainX
-
+          <div className ="text-start">
+            <p className="text-sm text-gray-400">2023 - Present</p>
+            <h2 className="">
+              <Tooltip title="Company Link">
+                <Link
+                  href="https://eliteprep.com/"
+                  target="_blank"
+                  rel="noopener"
+                  underline="none"
+                >
+                  <p className="text-gray-100">SAT/AP College Prep Tutor
+                  <ShortcutIcon fontSize="small" sx={{
+                    color: 'white',
+                    '&:hover': { color: 'lightgray' }
+                  }}/>
+                  </p>
                   
-                <ShortcutIcon fontSize="small" sx={{
-                  color: 'white',
-                  '&:hover': { color: 'lightgray' }
-                }}/>
-                </p>
-                
-              </Link>
-            </Tooltip>
-          </h2>
+                </Link>
+              </Tooltip>
+              <div className="mt-2 mb-2 flex flex-wrap">            
+                <Bubble text="Presentation"/>
+                <Bubble text="Communication"/>
+                <Bubble text="Computer Science"/>
+                <Bubble text="SAT Prep"/>
+                <Bubble text="Statistics"/>
+                <Bubble text="Physics"/>
+              </div>
+            </h2>
+          </div>
+          <div className="text-start">
+            <p className="text-sm text-gray-400">2021 - 2022</p>
+            <h2 className="">
+              <Tooltip title="Company Link">
+                <Link
+                  href="https://attainx.com/"
+                  target="_blank"
+                  rel="noopener"
+                  underline="none"
+                >
+                  <p className="text-gray-100">Full Stack Developer - AttainX
 
-          
-          {Bubble("React")}
-          React - AWS - Node.js - .NET - MaterialUI
+                    
+                  <ShortcutIcon fontSize="small" sx={{
+                    color: 'white',
+                    '&:hover': { color: 'lightgray' }
+                  }}/>
+                  </p>
+                  
+                </Link>
+              </Tooltip>
+            </h2>
+
+            <div className="mt-2 mb-2 flex flex-wrap">
+              <Bubble text="React"/>
+              <Bubble text="AWS"/>
+              <Bubble text="Node.js"/>
+              <Bubble text="MaterialUI"/>
+              <Bubble text="RESTful APIs"/>
+            </div>
+            
+            React - AWS - Node.js - .NET - MaterialUI
+            AWS Lambda, DynamoDB, S3, ReactJS, Postman
+          </div>
         </div>
 
         <div className ="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
