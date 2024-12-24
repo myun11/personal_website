@@ -106,7 +106,7 @@ const App = () => {
         </div>
         <div className="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
           <h2 className="text-xl font-medium mt-2 uppercase py-4">Experience</h2>
-          <div className ="text-start">
+          <div className ="text-start my-4">
             <p className="text-sm text-gray-400">2023 - Present</p>
             <h2 className="">
               <Tooltip title="Company Link">
@@ -116,7 +116,7 @@ const App = () => {
                   rel="noopener"
                   underline="none"
                 >
-                  <p className="text-gray-100">SAT/AP College Prep Tutor
+                  <p className="text-gray-100">SAT/AP College Prep Tutor - Elite Prep
                   <ShortcutIcon fontSize="small" sx={{
                     color: 'white',
                     '&:hover': { color: 'lightgray' }
@@ -125,17 +125,26 @@ const App = () => {
                   
                 </Link>
               </Tooltip>
+              <div className="text-start text-gray-400">
+                  Lead and form relationships with students and parents on structured class programs.
+                  Identify critical struggle points in lesson plans and manage time accordingly.
+                  Provide constructive feedback while tracking weekly improvements.
+              </div>
+
               <div className="mt-2 mb-2 flex flex-wrap">            
                 <Bubble text="Presentation"/>
                 <Bubble text="Communication"/>
+                <Bubble text="Mentoring"/>
+                <Bubble text="Customer Service"/>
                 <Bubble text="Computer Science"/>
-                <Bubble text="SAT Prep"/>
+                <Bubble text="Calculus 1-3"/>
+                <Bubble text="SAT Math"/>
                 <Bubble text="Statistics"/>
                 <Bubble text="Physics"/>
               </div>
             </h2>
           </div>
-          <div className="text-start">
+          <div className="text-start my-4">
             <p className="text-sm text-gray-400">2021 - 2022</p>
             <h2 className="">
               <Tooltip title="Company Link">
@@ -145,9 +154,7 @@ const App = () => {
                   rel="noopener"
                   underline="none"
                 >
-                  <p className="text-gray-100">Full Stack Developer - AttainX
-
-                    
+                  <p className="text-gray-100">Full Stack Developer - AttainX                    
                   <ShortcutIcon fontSize="small" sx={{
                     color: 'white',
                     '&:hover': { color: 'lightgray' }
@@ -158,25 +165,40 @@ const App = () => {
               </Tooltip>
             </h2>
 
+            <div className="text-start text-gray-400">
+              Built and deployed scalable solutions in an Agile environment to deliver innovative, data driven analytics and business insights.
+              Collaborated with local civilian and federal clients to achieve digital modernization goals.
+            </div>
+
             <div className="mt-2 mb-2 flex flex-wrap">
               <Bubble text="React"/>
               <Bubble text="AWS"/>
               <Bubble text="Node.js"/>
               <Bubble text="MaterialUI"/>
               <Bubble text="RESTful APIs"/>
+              <Bubble text="Microservices"/>
+              <Bubble text="Data Visualization"/>
             </div>
             
-            React - AWS - Node.js - .NET - MaterialUI
-            AWS Lambda, DynamoDB, S3, ReactJS, Postman
+            {/* React - AWS - Node.js - .NET - MaterialUI
+            AWS Lambda, DynamoDB, S3, ReactJS, Postman */}
           </div>
         </div>
 
         <div className ="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
           <h2 className="text-xl font-medium mt-2 uppercase">Projects</h2>
-          2024
-          sumeru.dev - Genshin Impact Web App
-          React - Tailwind CSS - Regex
-
+          <div className="text-start">
+            2024
+            sumeru.dev - Genshin Impact Web App
+            <div className="mt-2 mb-2 flex flex-wrap">
+              <Bubble text="React"/>
+              <Bubble text="TailwindCSS"/>
+              <Bubble text="RegEx"/>
+              <Bubble text="Responsive Design"/>
+              <Bubble text="Git"/>
+            </div>
+          </div>
+          
           2021
           Statistical Consultant - University of Illinois
           R - RShiny - ggplot2 - dplyr - tidyverse - rpart - corrplot
