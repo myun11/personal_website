@@ -6,12 +6,33 @@ import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
 import EmailIcon from '@mui/icons-material/Email';
 import Link from '@mui/material/Link';
+import ShortcutIcon from '@mui/icons-material/ArrowOutward';
 import './App.css'
 
 import React from 'react'
 
 const App = () => {
   
+
+  // const data = [
+  //   {
+  //     company : "AttainX",
+  //     companyURL : "https://attainx.com/",
+  //     description: "",
+  //     technologies: [],
+  //     dates:
+  //   }
+  // ]
+  
+  // Helper jsx function for displaying different technologies in bubbles
+  const Bubble = (tech) => {
+    return(
+      <div className = "rounded-xl bg-teal-900 text-gray-400">
+        {tech}
+      </div>
+    )
+  }
+
   return (
     <main className="bg-blue-950">
       <div className="">
@@ -92,9 +113,51 @@ const App = () => {
           </h3>
         </div>
         <div className="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
-          <h2 className="text-xl font-medium mt-2 uppercase">Experience</h2>
-          2021 - 2022
-          Full Stack Developer - AttainX
+          <h2 className="text-xl font-medium mt-2 uppercase py-4">Experience</h2>
+          <p className="text-sm text-gray-400">2023 - Present</p>
+          <h2 className="">
+            <Tooltip title="Company Link">
+              <Link
+                href="https://eliteprep.com/"
+                target="_blank"
+                rel="noopener"
+                underline="none"
+              >
+                <p className="text-gray-100">SAT/AP College Prep Tutor
+                <ShortcutIcon fontSize="small" sx={{
+                  color: 'white',
+                  '&:hover': { color: 'lightgray' }
+                }}/>
+                </p>
+                
+              </Link>
+            </Tooltip>
+          </h2>
+          
+          <p className="text-sm text-gray-400">2021 - 2022</p>
+          <h2 className="">
+            <Tooltip title="Company Link">
+              <Link
+                href="https://attainx.com/"
+                target="_blank"
+                rel="noopener"
+                underline="none"
+              >
+                <p className="text-gray-100">Full Stack Developer - AttainX
+
+                  
+                <ShortcutIcon fontSize="small" sx={{
+                  color: 'white',
+                  '&:hover': { color: 'lightgray' }
+                }}/>
+                </p>
+                
+              </Link>
+            </Tooltip>
+          </h2>
+
+          
+          {Bubble("React")}
           React - AWS - Node.js - .NET - MaterialUI
         </div>
 
