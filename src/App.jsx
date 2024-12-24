@@ -31,8 +31,8 @@ const App = () => {
         <div className="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
           <h1 className="text-4xl font-bold">Michael Yun</h1>
           <h2 className="text-xl font-medium mt-2">Full Stack Developer</h2>
-          <h3 className="text-base text-gray-400 mt-4">
-            I like to solve problems.
+          <h3 className="text-start text-base text-gray-400 mt-4">
+            I'm the one staying up late, turning ideas into innovative, seamless solutions.
           </h3>
           <span className="mt-4">
             <Tooltip title="GitHub">
@@ -104,11 +104,11 @@ const App = () => {
             and chasing goals at the gym.
           </h3>
         </div>
-        <div className="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
+        <div className="flex flex-col items-start text-gray-100 px-4 py-4">
           <h2 className="text-xl font-medium mt-2 uppercase py-4">Experience</h2>
           <div className ="text-start my-4">
             <p className="text-sm text-gray-400">2023 - Present</p>
-            <h2 className="">
+            <h2 className="pb-4">
               <Tooltip title="Company Link">
                 <Link
                   href="https://eliteprep.com/"
@@ -122,31 +122,29 @@ const App = () => {
                     '&:hover': { color: 'lightgray' }
                   }}/>
                   </p>
-                  
                 </Link>
               </Tooltip>
-              <div className="text-start text-gray-400">
-                  Lead and form relationships with students and parents on structured class programs.
-                  Identify critical struggle points in lesson plans and manage time accordingly.
-                  Provide constructive feedback while tracking weekly improvements.
-              </div>
-
-              <div className="mt-2 mb-2 flex flex-wrap">            
-                <Bubble text="Presentation"/>
-                <Bubble text="Communication"/>
-                <Bubble text="Mentoring"/>
-                <Bubble text="Customer Service"/>
-                <Bubble text="Computer Science"/>
-                <Bubble text="Calculus 1-3"/>
-                <Bubble text="SAT Math"/>
-                <Bubble text="Statistics"/>
-                <Bubble text="Physics"/>
-              </div>
             </h2>
+            <div className="text-start text-gray-400">
+              Lead and form relationships with students and parents on structured class programs.
+              Identify critical struggle points in lesson plans and manage time accordingly.
+              Provide constructive feedback while tracking weekly improvements.
+            </div>
+            <div className="mt-2 mb-2 flex flex-wrap">            
+              <Bubble text="Presentation"/>
+              <Bubble text="Communication"/>
+              <Bubble text="Mentoring"/>
+              <Bubble text="Customer Service"/>
+              <Bubble text="Computer Science"/>
+              <Bubble text="Calculus 1-3"/>
+              <Bubble text="SAT Math"/>
+              <Bubble text="Statistics"/>
+              <Bubble text="Physics"/>
+            </div>
           </div>
           <div className="text-start my-4">
             <p className="text-sm text-gray-400">2021 - 2022</p>
-            <h2 className="">
+            <h2 className="pb-4">
               <Tooltip title="Company Link">
                 <Link
                   href="https://attainx.com/"
@@ -178,6 +176,10 @@ const App = () => {
               <Bubble text="RESTful APIs"/>
               <Bubble text="Microservices"/>
               <Bubble text="Data Visualization"/>
+              <Bubble text="CI/CD Pipelines"/>
+              <Bubble text="Agile"/>
+              <Bubble text="Authentication"/>
+              <Bubble text="Authorization"/>
             </div>
             
             {/* React - AWS - Node.js - .NET - MaterialUI
@@ -187,21 +189,78 @@ const App = () => {
 
         <div className ="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
           <h2 className="text-xl font-medium mt-2 uppercase">Projects</h2>
-          <div className="text-start">
-            2024
-            sumeru.dev - Genshin Impact Web App
-            <div className="mt-2 mb-2 flex flex-wrap">
+          <div className ="text-start my-4">
+            <p className="text-sm text-gray-400">2024</p>
+            <h2 className="pb-4">
+              <Tooltip title="Project Link">
+                <Link
+                  href="https://sumeru.dev/"
+                  target="_blank"
+                  rel="noopener"
+                  underline="none"
+                >
+                  <p className="text-gray-100">sumeru.dev - Genshin Impact Web App
+                  <ShortcutIcon fontSize="small" sx={{
+                    color: 'white',
+                    '&:hover': { color: 'lightgray' }
+                  }}/>
+                  </p>
+                </Link>
+              </Tooltip>
+            </h2>
+            <div className="text-start text-gray-400">
+              A responsive web application designed to consolidate and visualize game assets and data.
+              View your favorite characters and their stat distributions, factions, artwork, skills, and more.
+              As one of the biggest contributors to this public API, I designed new schemas and assets, documented them thoroughly,
+              and provided guidelines to help future contributors contribute constructively.
+            </div>
+            <div className="mt-2 mb-2 flex flex-wrap">            
               <Bubble text="React"/>
               <Bubble text="TailwindCSS"/>
-              <Bubble text="RegEx"/>
+              <Bubble text="RegEx Validation"/>
+              <Bubble text="Theme Customization"/>
+              <Bubble text="Table vs Grid Display"/>
+              <Bubble text="API Architecture"/>
               <Bubble text="Responsive Design"/>
+              <Bubble text="Figma"/>
               <Bubble text="Git"/>
             </div>
           </div>
-          
-          2021
-          Statistical Consultant - University of Illinois
-          R - RShiny - ggplot2 - dplyr - tidyverse - rpart - corrplot
+          <div className ="text-start my-4">
+            <p className="text-sm text-gray-400">2021</p>
+            <h2 className="">
+              <Tooltip title="Project Link">
+                <Link
+                  href="https://sumeru.dev/"
+                  target="_blank"
+                  rel="noopener"
+                  underline="none"
+                >
+                  <p className="text-gray-100">Statistical Consultant - University of Illinois
+                  <ShortcutIcon fontSize="small" sx={{
+                    color: 'white',
+                    '&:hover': { color: 'lightgray' }
+                  }}/>
+                  </p>
+                  
+                </Link>
+              </Tooltip>
+              <div className="text-start text-gray-400">
+                Connected local clients and small business owners with actionable solutions and data driven insights.
+
+              </div>
+              <div className="mt-2 mb-2 flex flex-wrap">
+                <Bubble text="Data Analysis"/>           
+                <Bubble text="R"/>
+                <Bubble text="RShiny"/>
+                <Bubble text="ggplot2"/>
+                <Bubble text="dplyr"/>
+                <Bubble text="tidyverse"/>
+                <Bubble text="rpart"/>
+                <Bubble text="corrplot"/>
+              </div>
+            </h2>
+          </div>
         </div>
 
         <div className ="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
@@ -210,21 +269,6 @@ const App = () => {
           Bachelor of Science - Statistics
           University of Illinois Urbana-Champaign
           
-        </div>
-        <div>
-          {/* <Router>
-            <Navbar />
-            <Routes>
-              <Route path="/" element={<Home2/>} />
-                
-              <Route path="/about" element={<About/>} /> 
-                
-              <Route path="/projects" element={<Projects/>} />
-                
-              <Route path="/contacts" element={<Contacts/>} />
-                
-            </Routes>
-          </Router> */}
         </div>
       </div>
     </main>
