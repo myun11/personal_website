@@ -71,7 +71,7 @@ const App = () => {
 
 
   return (
-    <main className="w-full h-full">
+    <main className="w-screen h-full">
       <div className="md:columns-2">
         {/* Left Panel */}
         <div className="p-8 md:sticky md:top-0 md:col-span-1 md:h-screen">
