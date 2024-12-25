@@ -35,7 +35,7 @@ const App = () => {
 
 
   return (
-    <main className="bg-slate-900">
+    <main className="bg-slate-900 w-full h-full">
       <div className="md:columns-2">
         {/* Left Panel */}
         <div className="md:sticky md:top-0 md:col-span-1 md:h-screen">
@@ -102,6 +102,7 @@ const App = () => {
             <button onClick={() => document.getElementById('Experience')?.scrollIntoView({behavior: 'smooth'})}>Experience</button>
             <button onClick={() => document.getElementById('Projects')?.scrollIntoView({behavior: 'smooth'})}>Projects</button>
             <button onClick={() => document.getElementById('Education')?.scrollIntoView({behavior: 'smooth'})}>Education</button>
+            {nav}
           </div>
 
         </div>
@@ -122,8 +123,8 @@ const App = () => {
               dashboards which provided business insights to my teammates while saving them time and resources.  
             </h3>
             <h3 className="text-base mt-4 text-gray-400 text-start">
-              In my free time, I enjoy cosplaying with my friends, tinkering with 3D print and Arduino-based cosplay props,
-              and chasing goals at the gym.
+              In my free time, I enjoy cosplaying with my friends, tinkering with 3D printing and Arduino-based cosplay props,
+              practicing guitar, and chasing personal records at the gym.
             </h3>
           </div>
 
@@ -189,7 +190,7 @@ const App = () => {
               <div className="text-start text-gray-400">
                 Built and deployed scalable solutions in an Agile environment to deliver innovative, data driven analytics and business insights.
                 Collaborated with local civilian and federal clients to achieve digital modernization goals.
-                Worked closely with cross-functional teams including Product Managers, a UI/UX Designer,
+                Worked closely with cross-functional teams including Product Managers, Scrum Master, UI/UX Designer,
                 Cloud Engineer, Business Intelligence, and Business Analyst.
               </div>
 
