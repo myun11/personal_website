@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -10,26 +9,23 @@ import ShortcutIcon from '@mui/icons-material/ArrowOutward';
 import './App.css'
 import Bubble from './components/Bubble';
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const App = () => {
-  
 
-  // const data = [
-  //   {
-  //     company : "AttainX",
-  //     companyURL : "https://attainx.com/",
-  //     description: "",
-  //     technologies: [],
-  //     dates:
-  //   }
-  // ]
+  // Used to keep the state of tabs which will also change through scrolling
+  const [nav, setNav] = useState("About")
   
+  useEffect(() => {
+
+  }, [])
+
+
   return (
     <main className="bg-slate-900">
       <div className="md:columns-2">
         {/* Left Panel */}
-        <div className="">
+        <div className="md:sticky md:top-0 md:col-span-1 md:h-screen">
           <div className="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
             <h1 className="text-4xl font-bold">Michael Yun</h1>
             <h2 className="text-xl font-medium mt-2">Full Stack Developer</h2>
@@ -87,15 +83,17 @@ const App = () => {
               </Tooltip>
             </span>
           </div>
-          <div className="">
-
+          <div className="text-white max-md:hidden">
+            <button onClick={() => document.getElementById('Experience')?.scrollIntoView({behavior: 'smooth'})}>Experience</button>
+            <button onClick={() => document.getElementById('Projects')?.scrollIntoView({behavior: 'smooth'})}>Projects</button>
+            <button onClick={() => document.getElementById('Education')?.scrollIntoView({behavior: 'smooth'})}>Education</button>
           </div>
 
         </div>
         {/* Right Panel */}
         <div className="overflow-y-scroll"> 
           <div className="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
-            <h2 className="text-xl font-medium mt-2 uppercase">About</h2>
+            <h2 id="About" className="text-xl font-medium mt-2 uppercase">About</h2>
             <h3 className="text-base mt-4 text-gray-400 text-start">
               I'm a dedicated US citizen software engineer with a strong focus on creating 
               dynamic web applications and captivating data visualizations.
@@ -103,9 +101,9 @@ const App = () => {
               exceptional user experiences. I aim to bring innovation and excellence to every project I undertake.
             </h3>
             <h3 className="text-base mt-4 text-gray-400 text-start">
-              I come from a statistics and computer science background, specializing in technologies like
+              I have a statistics and computer science background, specializing in technologies like
               React.js, AWS, ASP.NET Core, and R while equipped with a solid understanding of handling data. 
-              In the past, I've built scalable and reusable applications and 
+              I've built scalable and reusable applications and 
               dashboards which provided business insights to my teammates while saving them time and resources.  
             </h3>
             <h3 className="text-base mt-4 text-gray-400 text-start">
@@ -114,7 +112,7 @@ const App = () => {
             </h3>
           </div>
 
-          <div className="flex flex-col items-start text-gray-100 px-4 py-4">
+          <div id="Experience" className="flex flex-col items-start text-gray-100 px-4 py-4">
             <h2 className="text-xl font-medium mt-2 uppercase py-4">Experience</h2>
             <div className ="text-start my-4">
               <p className="text-sm text-gray-400">2023 - Present</p>
@@ -176,6 +174,8 @@ const App = () => {
               <div className="text-start text-gray-400">
                 Built and deployed scalable solutions in an Agile environment to deliver innovative, data driven analytics and business insights.
                 Collaborated with local civilian and federal clients to achieve digital modernization goals.
+                Worked closely with cross-functional teams including Product Managers, a UI/UX Designer,
+                Cloud Engineer, Business Intelligence, and Business Analyst.
               </div>
 
               <div className="mt-2 mb-2 flex flex-wrap">
@@ -197,7 +197,7 @@ const App = () => {
             </div>
           </div>
 
-          <div className ="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
+          <div id="Projects" className ="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
             <h2 className="text-xl font-medium mt-2 uppercase">Projects</h2>
             <div className ="text-start my-4">
               <p className="text-sm text-gray-400">2024</p>
@@ -275,7 +275,7 @@ const App = () => {
             </div>
           </div>
 
-          <div className ="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
+          <div id="Education" className ="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
             <h2 className="text-xl font-medium mt-2 uppercase">Education</h2>
             <div className ="text-start my-4">
               <p className="text-sm text-gray-400">2017-2021</p>
