@@ -15,23 +15,26 @@ const App = () => {
 
   // Used to keep the state of tabs which will also change through scrolling
   const [nav, setNav] = useState("About")
-  const aboutTab = useRef();
-  const experienceTab = useRef();
-  const projectsTab = useRef();
-  const educationTab = useRef();
+  const sectionRefs = useRef({});
   
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      // console.log(entries)
-      const entry = entries[0]
-      setNav(entry.target.id)
-      // console.log('entry', entry.target.id)
-    })
-    observer.observe(aboutTab.current)
-    observer.observe(experienceTab.current)
-    observer.observe(projectsTab.current)
-    observer.observe(educationTab.current)
-  }, [])
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setNav(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.6 } // Adjust threshold as needed
+    );
+
+    Object.values(sectionRefs.current).forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
 
   return (
@@ -97,18 +100,17 @@ const App = () => {
               </Tooltip>
             </span>
           </div>
-          <div className="text-white max-md:hidden">
-            <button onClick={() => document.getElementById('About')?.scrollIntoView({behavior: 'smooth'})}>About</button>
-            <button onClick={() => document.getElementById('Experience')?.scrollIntoView({behavior: 'smooth'})}>Experience</button>
-            <button onClick={() => document.getElementById('Projects')?.scrollIntoView({behavior: 'smooth'})}>Projects</button>
-            <button onClick={() => document.getElementById('Education')?.scrollIntoView({behavior: 'smooth'})}>Education</button>
-            {nav}
+          <div className="text-white max-md:hidden flex flex-col">
+            <button className={nav == "About" ?      "text-white" : "text-gray-400 "} onClick={() => document.getElementById('About')?.scrollIntoView({behavior: 'smooth'})}>About</button>
+            <button className={nav == "Experience" ? "text-white" : "text-gray-400 "} onClick={() => document.getElementById('Experience')?.scrollIntoView({behavior: 'smooth'})}>Experience</button>
+            <button className={nav == "Projects" ?   "text-white" : "text-gray-400 "} onClick={() => document.getElementById('Projects')?.scrollIntoView({behavior: 'smooth'})}>Projects</button>
+            <button className={nav == "Education" ?  "text-white" : "text-gray-400 "} onClick={() => document.getElementById('Education')?.scrollIntoView({behavior: 'smooth'})}>Education</button>
           </div>
 
         </div>
         {/* Right Panel */}
         <div className="overflow-y-scroll p-8"> 
-          <div ref={aboutTab} id="About" className="min-h-screen flex flex-col justify-center items-start text-gray-100 px-4 py-4">
+          <div ref={(el) => (sectionRefs.current["About"] = el)} id="About" className="min-h-screen flex flex-col justify-center items-start text-gray-100 px-4 py-4">
             <h2 className="text-xl font-medium mt-2 uppercase">About</h2>
             <h3 className="text-base mt-4 text-gray-400 text-start">
               I'm a dedicated US citizen software engineer with a strong focus on creating 
@@ -128,7 +130,7 @@ const App = () => {
             </h3>
           </div>
 
-          <div ref={experienceTab} id="Experience" className="min-h-screen flex flex-col items-start text-gray-100 px-4 py-4">
+          <div ref={(el) => (sectionRefs.current["Experience"] = el)} id="Experience" className="min-h-screen flex flex-col items-start text-gray-100 px-4 py-4">
             <h2 className="text-xl font-medium mt-2 uppercase py-4">Experience</h2>
             <div className ="text-start my-4">
               <p className="text-sm text-gray-400">2023 - Present</p>
@@ -213,7 +215,7 @@ const App = () => {
             </div>
           </div>
 
-          <div ref={projectsTab} id="Projects" className ="min-h-screen flex flex-col justify-center items-start text-gray-100 px-4 py-4">
+          <div ref={(el) => (sectionRefs.current["Projects"] = el)} id="Projects" className ="min-h-screen flex flex-col justify-center items-start text-gray-100 px-4 py-4">
             <h2 className="text-xl font-medium mt-2 uppercase">Projects</h2>
             <div className ="text-start my-4">
               <p className="text-sm text-gray-400">2024</p>
@@ -292,7 +294,7 @@ const App = () => {
             </div>
           </div>
 
-          <div ref={educationTab} id="Education" className ="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
+          <div ref={(el) => (sectionRefs.current["Education"] = el)} id="Education" className ="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
             <h2 className="text-xl font-medium mt-2 uppercase">Education</h2>
             <div className ="text-start my-4">
               <p className="text-sm text-gray-400">2017-2021</p>
