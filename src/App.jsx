@@ -9,15 +9,28 @@ import ShortcutIcon from '@mui/icons-material/ArrowOutward';
 import './App.css'
 import Bubble from './components/Bubble';
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 const App = () => {
 
   // Used to keep the state of tabs which will also change through scrolling
   const [nav, setNav] = useState("About")
+  const aboutTab = useRef();
+  const experienceTab = useRef();
+  const projectsTab = useRef();
+  const educationTab = useRef();
   
   useEffect(() => {
-
+    const observer = new IntersectionObserver((entries) => {
+      // console.log(entries)
+      const entry = entries[0]
+      setNav(entry.target.id)
+      // console.log('entry', entry.target.id)
+    })
+    observer.observe(aboutTab.current)
+    observer.observe(experienceTab.current)
+    observer.observe(projectsTab.current)
+    observer.observe(educationTab.current)
   }, [])
 
 
@@ -28,10 +41,12 @@ const App = () => {
         <div className="md:sticky md:top-0 md:col-span-1 md:h-screen">
           <div className="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
             <h1 className="text-4xl font-bold">Michael Yun</h1>
+            {nav}
             <h2 className="text-xl font-medium mt-2">Full Stack Developer</h2>
             <h3 className="text-start text-base text-gray-400 mt-4">
               I'm the one staying up late, turning ideas into innovative, seamless solutions.
             </h3>
+            
             <span className="mt-4">
               <Tooltip title="GitHub">
                 <Link
@@ -91,9 +106,9 @@ const App = () => {
 
         </div>
         {/* Right Panel */}
-        <div className="overflow-y-scroll"> 
-          <div className="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
-            <h2 id="About" className="text-xl font-medium mt-2 uppercase">About</h2>
+        <div className="overflow-y-scroll p-8"> 
+          <div ref={aboutTab} id="About" className="min-h-screen flex flex-col justify-center items-start text-gray-100 px-4 py-4">
+            <h2 className="text-xl font-medium mt-2 uppercase">About</h2>
             <h3 className="text-base mt-4 text-gray-400 text-start">
               I'm a dedicated US citizen software engineer with a strong focus on creating 
               dynamic web applications and captivating data visualizations.
@@ -112,7 +127,7 @@ const App = () => {
             </h3>
           </div>
 
-          <div id="Experience" className="flex flex-col items-start text-gray-100 px-4 py-4">
+          <div ref={experienceTab} id="Experience" className="min-h-screen flex flex-col items-start text-gray-100 px-4 py-4">
             <h2 className="text-xl font-medium mt-2 uppercase py-4">Experience</h2>
             <div className ="text-start my-4">
               <p className="text-sm text-gray-400">2023 - Present</p>
@@ -197,7 +212,7 @@ const App = () => {
             </div>
           </div>
 
-          <div id="Projects" className ="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
+          <div ref={projectsTab} id="Projects" className ="min-h-screen flex flex-col justify-center items-start text-gray-100 px-4 py-4">
             <h2 className="text-xl font-medium mt-2 uppercase">Projects</h2>
             <div className ="text-start my-4">
               <p className="text-sm text-gray-400">2024</p>
@@ -258,7 +273,8 @@ const App = () => {
                 </Tooltip>
                 <div className="text-start text-gray-400">
                   Connected local clients and small business owners with actionable solutions and data driven insights.
-                  Performed statistical analyses, data visualization, and results presentation on survey data of international Chinese students on what combination of
+                  Performed statistical analyses via hypothesis testing, multicollinearity testing,
+                  correlation analysis, data visualization, and results presentation on survey data of international Chinese students on what combination of
                   motivational factors and intrinsic behaviors affected English proficiency.
                 </div>
                 <div className="mt-2 mb-2 flex flex-wrap">
@@ -275,7 +291,7 @@ const App = () => {
             </div>
           </div>
 
-          <div id="Education" className ="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
+          <div ref={educationTab} id="Education" className ="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
             <h2 className="text-xl font-medium mt-2 uppercase">Education</h2>
             <div className ="text-start my-4">
               <p className="text-sm text-gray-400">2017-2021</p>
