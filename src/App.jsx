@@ -8,10 +8,43 @@ import Link from '@mui/material/Link';
 import ShortcutIcon from '@mui/icons-material/ArrowOutward';
 import './App.css'
 import Bubble from './components/Bubble';
+import Radio from './components/Radio';
 
 import React, { useState, useEffect, useRef } from 'react'
 
 const App = () => {
+
+  const container = document.querySelector('.container');
+  function createStar() {
+    // Create a star element
+    const star = document.createElement('div');
+    star.className = 'star';
+
+    // Set random position within the container
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const startX = Math.random() * window.innerWidth;
+    const startY = Math.random() * window.innerHeight;
+    
+    const starSize = Math.random() * 16 + 0.01;
+    star.style.width = `${starSize}px`;
+    star.style.height = `${starSize}px`;
+
+    star.style.left = `${startX}px`;
+    star.style.top = `${startY}px`;
+
+    // Append the star to the container
+    container.appendChild(star);
+
+    // Remove the star after the animation ends
+    star.addEventListener('animationend', () => {
+      container.removeChild(star);
+    });
+  }
+  // Launch a star at random intervals
+  setInterval(() => {
+    createStar();
+  }, Math.random() * 2000 + 1000); // Random interval between 1-3 seconds
 
   // Used to keep the state of tabs which will also change through scrolling
   const [nav, setNav] = useState("About")
@@ -38,10 +71,10 @@ const App = () => {
 
 
   return (
-    <main className="bg-slate-900 w-full h-full">
+    <main className="">
       <div className="md:columns-2">
         {/* Left Panel */}
-        <div className="md:sticky md:top-0 md:col-span-1 md:h-screen">
+        <div className="p-8 md:sticky md:top-0 md:col-span-1 md:h-screen">
           <div className="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
             <h1 className="text-4xl font-bold">Michael Yun</h1>
             <h2 className="text-xl font-medium mt-2">Full Stack Developer</h2>
@@ -105,6 +138,7 @@ const App = () => {
             <button className={nav == "Experience" ? "text-white" : "text-gray-400 "} onClick={() => document.getElementById('Experience')?.scrollIntoView({behavior: 'smooth'})}>Experience</button>
             <button className={nav == "Projects" ?   "text-white" : "text-gray-400 "} onClick={() => document.getElementById('Projects')?.scrollIntoView({behavior: 'smooth'})}>Projects</button>
             <button className={nav == "Education" ?  "text-white" : "text-gray-400 "} onClick={() => document.getElementById('Education')?.scrollIntoView({behavior: 'smooth'})}>Education</button>
+            <Radio/>
           </div>
 
         </div>

@@ -1,42 +1,57 @@
 #root {
-  /* max-width: 1280px; */
   margin: 0 auto;
-  padding: 0rem;
+  /* padding: 0rem;
   text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: #172554;
+  background-image: linear-gradient(
+    32deg,
+    rgba(8, 8, 8, 0.74) 30px,
+    transparent
+  );
+  background-size: 60px 60px;
+  background-position: -5px -5px; */
+}
+.container {
+  /* position: fixed; */
+  z-index: -1;
+  background-color: #0b1228;
+  inset: -4000%;
+  pointer-events:all;
+  /* overflow: hidden; */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.star {
+  position: absolute;
+  z-index: -.5;
+  width: 4px;
+  height: 4px;
+  background-color: #00b8e6;
+  border-radius: 50%;
+  opacity: 0;
+  animation: shoot 3s ease-in-out forwards, fadeIn 1.5s ease-in-out forwards;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes shoot {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translate(50px, 50px); /* Adjust for diagonal shooting */
+    opacity: 0;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  50% {
+    opacity: 1; /* Star fully visible at halfway through */
+  }
+  100% {
+    opacity: 0; /* Fade out at the end */
+  }
 }
