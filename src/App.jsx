@@ -41,7 +41,6 @@ const App = () => {
         <div className="md:sticky md:top-0 md:col-span-1 md:h-screen">
           <div className="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
             <h1 className="text-4xl font-bold">Michael Yun</h1>
-            {nav}
             <h2 className="text-xl font-medium mt-2">Full Stack Developer</h2>
             <h3 className="text-start text-base text-gray-400 mt-4">
               I'm the one staying up late, turning ideas into innovative, seamless solutions.
@@ -99,6 +98,7 @@ const App = () => {
             </span>
           </div>
           <div className="text-white max-md:hidden">
+            <button onClick={() => document.getElementById('About')?.scrollIntoView({behavior: 'smooth'})}>About</button>
             <button onClick={() => document.getElementById('Experience')?.scrollIntoView({behavior: 'smooth'})}>Experience</button>
             <button onClick={() => document.getElementById('Projects')?.scrollIntoView({behavior: 'smooth'})}>Projects</button>
             <button onClick={() => document.getElementById('Education')?.scrollIntoView({behavior: 'smooth'})}>Education</button>
