@@ -44,7 +44,7 @@ const App = () => {
   // Launch a star at random intervals
   setInterval(() => {
     createStar();
-  }, Math.random() * 2000 + 1000); // Random interval between 1-3 seconds
+  }, Math.random() * 100 + 20); // Random interval
 
   // Used to keep the state of tabs which will also change through scrolling
   const [nav, setNav] = useState("About")
@@ -71,7 +71,7 @@ const App = () => {
 
 
   return (
-    <main className="">
+    <main className="w-full h-full">
       <div className="md:columns-2">
         {/* Left Panel */}
         <div className="p-8 md:sticky md:top-0 md:col-span-1 md:h-screen">

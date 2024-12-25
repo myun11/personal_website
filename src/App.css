@@ -32,7 +32,7 @@
   background-color: #00b8e6;
   border-radius: 50%;
   opacity: 0;
-  animation: shoot 3s ease-in-out forwards, fadeIn 1.5s ease-in-out forwards;
+  animation: shoot 3s ease-in-out forwards, fadeIn 3s ease-in-out forwards;
 }
 
 @keyframes shoot {
@@ -41,7 +41,7 @@
     opacity: 1;
   }
   100% {
-    transform: translate(50px, 50px); /* Adjust for diagonal shooting */
+    transform: translate(100px, 100px); /* Adjust for diagonal shooting */
     opacity: 0;
   }
 }
