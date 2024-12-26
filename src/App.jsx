@@ -125,13 +125,13 @@ const App = () => {
   return (
     <main className="w-full h-full bg-[#0b1228]">
       <div className="flex flex-col md:flex-row">
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 items-center justify-center">
           {/* Left Panel */}
-          <div className="p-4 items-center justify-center justify-items-center md:sticky md:top-0 md:h-screen">
-            <div id="Header" className="flex flex-col justify-center items-end text-gray-100 px-4 py-4">
+          <div className="p-2 items-center justify-center justify-items-center md:sticky md:top-0 md:h-screen">
+            <div id="Header" className="md:text-end text-gray-100 px-4 py-4">
               <h1 className="text-6xl font-bold">Michael Yun</h1>
               <h2 className="text-xl font-medium mt-2">Full Stack Developer</h2>
-              <h3 className="text-end text-base text-gray-400 mt-4">
+              <h3 className="md:text-end text-base text-gray-400 mt-4">
                 I'm the one staying up late, turning ideas into innovative, seamless solutions.
               </h3>
               <span className="mt-4">
