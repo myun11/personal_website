@@ -127,11 +127,11 @@ const App = () => {
       <div className="flex flex-col md:flex-row">
         <div className="md:w-1/2">
           {/* Left Panel */}
-          <div className="p-8 md:sticky md:top-0 md:h-screen">
-            <div id="Header" className="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
+          <div className="p-8 items-center justify-center justify-items-center md:sticky md:top-0 md:h-screen">
+            <div id="Header" className="flex flex-col justify-center items-end text-gray-100 px-4 py-4">
               <h1 className="text-6xl font-bold">Michael Yun</h1>
               <h2 className="text-xl font-medium mt-2">Full Stack Developer</h2>
-              <h3 className="text-start text-base text-gray-400 mt-4">
+              <h3 className="text-end text-base text-gray-400 mt-4">
                 I'm the one staying up late, turning ideas into innovative, seamless solutions.
               </h3>
               <span className="mt-4">
@@ -197,7 +197,7 @@ const App = () => {
                 </Tooltip>
               </span>
             </div>
-            <div className="text-white max-md:hidden flex flex-col">
+            <div className="max-md:hidden flex flex-col text-end">
               <Radio
                 nav = {nav}
                 setNav = {setNav}

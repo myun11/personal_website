@@ -51,7 +51,8 @@ const StyledWrapper = styled.div`
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    align-items: flex-end;
   }
   .radio-container input {
     cursor: pointer;
@@ -60,7 +61,7 @@ const StyledWrapper = styled.div`
   }
   .radio-container .glider-container {
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
     bottom: 0;
     background: linear-gradient(
@@ -96,13 +97,13 @@ const StyledWrapper = styled.div`
   .radio-container .glider-container .glider::after {
     content: "";
     position: absolute;
-    left: 0;
+    right: 0;
     height: 100%;
     width: 150px;
     background: linear-gradient(
       90deg,
-      var(--main-color-opacity) 0%,
-      rgba(0, 0, 0, 0) 100%
+      rgba(0, 0, 0, 0) 0%,
+      var(--main-color-opacity) 100%
     );
   }
   .radio-container label {
