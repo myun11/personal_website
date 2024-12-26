@@ -127,7 +127,7 @@ const App = () => {
       <div className="flex flex-col md:flex-row">
         <div className="md:w-1/2">
           {/* Left Panel */}
-          <div className="p-8 items-center justify-center justify-items-center md:sticky md:top-0 md:h-screen">
+          <div className="p-4 items-center justify-center justify-items-center md:sticky md:top-0 md:h-screen">
             <div id="Header" className="flex flex-col justify-center items-end text-gray-100 px-4 py-4">
               <h1 className="text-6xl font-bold">Michael Yun</h1>
               <h2 className="text-xl font-medium mt-2">Full Stack Developer</h2>
@@ -208,9 +208,9 @@ const App = () => {
         </div>
         <div className="md:w-1/2">
           {/* Right Panel */}
-          <div className="container overflow-y-scroll p-8"> 
+          <div className="p-4 container overflow-y-scroll"> 
             <div ref={(el) => (sectionRefs.current["About"] = el)} id="About" className="text-overlay min-h-screen flex flex-col justify-center items-start text-gray-100 px-4 py-4">
-              <h2 className="text-overlay text-xl font-medium mt-2 uppercase">About</h2>
+              <h2 className="text-overlay text-xl font-medium uppercase">About</h2>
               <h3 className="text-overlay text-base mt-4 text-gray-400 text-start">
                 I'm a dedicated US citizen software engineer with a strong focus on creating 
                 dynamic web applications and captivating data visualizations.
