@@ -1,31 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
-const Radio = (props) => {
-  return (
+const Radio = ({ nav }) => {
+  useEffect(() => {
+    const radioButtons = document.querySelectorAll('.radio-container input');
+    radioButtons.forEach((radio) => {
+      if (radio.id === `radio-${nav.toLowerCase()}`) {
+        radio.checked = true;
+      }
+    });
+  }, [nav]);
 
-    // <button className={nav == "About" ?      "text-white" : "text-gray-400 "} onClick={() => document.getElementById('About')?.scrollIntoView({behavior: 'smooth'})}>About</button>
-    // <button className={nav == "Experience" ? "text-white" : "text-gray-400 "} onClick={() => document.getElementById('Experience')?.scrollIntoView({behavior: 'smooth'})}>Experience</button>
-    // <button className={nav == "Projects" ?   "text-white" : "text-gray-400 "} onClick={() => document.getElementById('Projects')?.scrollIntoView({behavior: 'smooth'})}>Projects</button>
-    // <button className={nav == "Education" ?  "text-white" : "text-gray-400 "} onClick={() => document.getElementById('Education')?.scrollIntoView({behavior: 'smooth'})}>Education</button>
-                  
-    <StyledWrapper>
+  return (
+    <StyledWrapper nav={nav}>
       <div className="radio-container">
-        
-        <input onClick={() => {
-            document.getElementById('About')?.scrollIntoView({behavior: 'smooth'})
-            props.setNav("About")
+        <input onClick = {() => {
+            document.getElementById('About')?.scrollIntoView({behavior: 'smooth'});
         }} defaultChecked id="radio-about" name="radio" type="radio" />
-        <label htmlFor="About">About</label>
-        <input onClick={() => {
-            document.getElementById('Experience')?.scrollIntoView({behavior: 'smooth'})
-            props.setNav("Experience")
-        }}id="radio-experience" name="radio" type="radio" />
-        <label htmlFor="Experience">Experience</label>
-        <input id="radio-projects" name="radio" type="radio" />
-        <label htmlFor="Projects">Projects</label>
-        <input id="radio-education" name="radio" type="radio" />
-        <label htmlFor="Education">Education</label>
+        <label htmlFor="radio-about" className={nav == 'About' ? 'active' : ''}>ABOUT</label>
+        
+        <input onClick = {() => {
+            document.getElementById('Experience')?.scrollIntoView({behavior: 'smooth'});
+        }} id="radio-experience" name="radio" type="radio" />
+        <label htmlFor="radio-experience" className={nav == 'Experience' ? 'active' : ''}>EXPERIENCE</label>
+        
+        <input onClick = {() => {
+            document.getElementById('Projects')?.scrollIntoView({behavior: 'smooth'});
+        }} id="radio-projects" name="radio" type="radio" className={nav == 'Projects' ? 'active' : ''}/>
+        <label htmlFor="radio-projects">PROJECTS</label>
+        
+        <input onClick = {() => {
+            document.getElementById('Education')?.scrollIntoView({behavior: 'smooth'});
+        }} id="radio-education" name="radio" type="radio" className={nav == 'Education' ? 'active' : ''}/>
+        <label htmlFor="radio-education">EDUCATION</label>
+        
         <div className="glider-container">
           <div className="glider" />
         </div>
@@ -35,13 +43,11 @@ const Radio = (props) => {
 }
 
 const StyledWrapper = styled.div`
+
   .radio-container {
     --main-color: #008080;
     --main-color-opacity: #f7e4791c;
-
-    /* change this according inputs count */
     --total-radio: 4;
-
     display: flex;
     flex-direction: column;
     position: relative;
@@ -50,6 +56,7 @@ const StyledWrapper = styled.div`
   .radio-container input {
     cursor: pointer;
     appearance: none;
+    display:none;
   }
   .radio-container .glider-container {
     position: absolute;
@@ -107,7 +114,14 @@ const StyledWrapper = styled.div`
   }
 
   .radio-container input:checked + label {
-    color: var(--main-color);
+    color: white;
+  }
+
+  .radio-container label.active + label:hover {
+    color: white;
+  }
+  .radio-container label:not(.active) + label:hover {
+    color: grey;
   }
 
   .radio-container input:nth-of-type(1):checked ~ .glider-container .glider {

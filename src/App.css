@@ -22,11 +22,20 @@ body, html {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   width: 100%; /* Ensure the main container spans the full width */
   height: 100%;
 }
 
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+  }
+}
+
 .container {
+  flex: 1;
   /* position: fixed; */
   margin: 0;
   width: 100%;
