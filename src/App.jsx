@@ -185,11 +185,14 @@ const App = () => {
               </span>
             </div>
             <div className="text-white max-md:hidden flex flex-col">
-              <button className={nav == "About" ?      "text-white" : "text-gray-400 "} onClick={() => document.getElementById('About')?.scrollIntoView({behavior: 'smooth'})}>About</button>
+              {/* <button className={nav == "About" ?      "text-white" : "text-gray-400 "} onClick={() => document.getElementById('About')?.scrollIntoView({behavior: 'smooth'})}>About</button>
               <button className={nav == "Experience" ? "text-white" : "text-gray-400 "} onClick={() => document.getElementById('Experience')?.scrollIntoView({behavior: 'smooth'})}>Experience</button>
               <button className={nav == "Projects" ?   "text-white" : "text-gray-400 "} onClick={() => document.getElementById('Projects')?.scrollIntoView({behavior: 'smooth'})}>Projects</button>
-              <button className={nav == "Education" ?  "text-white" : "text-gray-400 "} onClick={() => document.getElementById('Education')?.scrollIntoView({behavior: 'smooth'})}>Education</button>
-              <Radio/>
+              <button className={nav == "Education" ?  "text-white" : "text-gray-400 "} onClick={() => document.getElementById('Education')?.scrollIntoView({behavior: 'smooth'})}>Education</button> */}
+              <Radio
+                nav = {nav}
+                setNav = {setNav}
+              />
             </div>
 
           </div>

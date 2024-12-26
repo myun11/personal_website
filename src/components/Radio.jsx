@@ -1,13 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Radio = () => {
+const Radio = (props) => {
   return (
+
+    // <button className={nav == "About" ?      "text-white" : "text-gray-400 "} onClick={() => document.getElementById('About')?.scrollIntoView({behavior: 'smooth'})}>About</button>
+    // <button className={nav == "Experience" ? "text-white" : "text-gray-400 "} onClick={() => document.getElementById('Experience')?.scrollIntoView({behavior: 'smooth'})}>Experience</button>
+    // <button className={nav == "Projects" ?   "text-white" : "text-gray-400 "} onClick={() => document.getElementById('Projects')?.scrollIntoView({behavior: 'smooth'})}>Projects</button>
+    // <button className={nav == "Education" ?  "text-white" : "text-gray-400 "} onClick={() => document.getElementById('Education')?.scrollIntoView({behavior: 'smooth'})}>Education</button>
+                  
     <StyledWrapper>
       <div className="radio-container">
-        <input defaultChecked id="radio-about" name="radio" type="radio" />
+        
+        <input onClick={() => {
+            document.getElementById('About')?.scrollIntoView({behavior: 'smooth'})
+            props.setNav("About")
+        }} defaultChecked id="radio-about" name="radio" type="radio" />
         <label htmlFor="About">About</label>
-        <input id="radio-experience" name="radio" type="radio" />
+        <input onClick={() => {
+            document.getElementById('Experience')?.scrollIntoView({behavior: 'smooth'})
+            props.setNav("Experience")
+        }}id="radio-experience" name="radio" type="radio" />
         <label htmlFor="Experience">Experience</label>
         <input id="radio-projects" name="radio" type="radio" />
         <label htmlFor="Projects">Projects</label>
