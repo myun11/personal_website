@@ -1,6 +1,7 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import DownloadIcon from '@mui/icons-material/Download';
 import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
 import EmailIcon from '@mui/icons-material/Email';
@@ -9,6 +10,7 @@ import ShortcutIcon from '@mui/icons-material/ArrowOutward';
 import './App.css'
 import Bubble from './components/Bubble';
 import Radio from './components/Radio';
+import Resume from './Yun_Michael_Full_Stack_Developer.pdf';
 
 import React, { useState, useEffect, useRef } from 'react'
 
@@ -158,7 +160,7 @@ const App = () => {
                     </IconButton>
                   </Link>
                 </Tooltip>
-                <Tooltip title="LinkedIn">
+                <Tooltip title="Instagram">
                   <Link
                     href="https://www.instagram.com/heybbyitsmichael/"
                     rel="noopener"
@@ -179,6 +181,18 @@ const App = () => {
                   >
                     <IconButton aria-label="Email">
                       <EmailIcon sx={{ color: 'white', '&:hover': { color: 'lightgray' } }} />
+                    </IconButton>
+                  </Link>
+                </Tooltip>
+                <Tooltip title="Download Resume">
+                  <Link
+                    href= {Resume}
+                    target="_blank"
+                  >
+                    <IconButton onClick={() => {
+
+                    }} aria-label="Email">
+                      <DownloadIcon sx={{ color: 'white', '&:hover': { color: 'lightgray' } }} />
                     </IconButton>
                   </Link>
                 </Tooltip>
