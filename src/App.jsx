@@ -13,14 +13,6 @@ import Radio from './components/Radio';
 import React, { useState, useEffect, useRef } from 'react'
 
 const App = () => {
-    // Function to check if the star is outside the viewport
-    function checkStarPosition() {
-      const starRect = star.getBoundingClientRect();
-      if (starRect.right < 0 || starRect.left > viewportWidth) {
-        star.remove();
-      }
-    }
-
   function createStar() {
     const container = document.querySelector('.container');
     // Create a star element
@@ -50,16 +42,43 @@ const App = () => {
     // Function to check if the star is outside the viewport
     function checkStarPosition() {
       const starRect = star.getBoundingClientRect();
-      if (starRect.right < 0 || starRect.left > viewportWidth +1000) {
+      if (starRect.right < 0 || starRect.left > viewportWidth) {
         star.remove();
       }
+      // Check for overlap with the right panel sections
+      const aboutSection = document.getElementById('About');
+      const experienceSection = document.getElementById('Experience');
+      const projectsSection = document.getElementById('Projects');
+      const educationSection = document.getElementById('Education');
+      const headerSection = document.getElementById('Header');
+      const sectionArray = [
+        aboutSection,
+        experienceSection,
+        projectsSection,
+        educationSection,
+        headerSection
+      ];  
+      sectionArray.forEach((sect) => {
+        let textRect = sect.getBoundingClientRect();
+        if (
+          starRect.left < textRect.right &&
+          starRect.right > textRect.left &&
+          starRect.top < textRect.bottom &&
+          starRect.bottom > textRect.top
+        ) {
+          star.classList.add('blur');
+        }
+      })
     }
+
 
     // Remove the star after the animation ends
     star.addEventListener('animationiteration', checkStarPosition);
     star.addEventListener('animationend', () => {
       star.remove();
     });
+    // Initial check for overlap
+    checkStarPosition();
   }
  // Create stars immediately on page load
  useEffect(() => {
@@ -72,7 +91,7 @@ const App = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       createStar();
-    }, Math.random() * 20 + 20); // Random interval
+    }, Math.random() * 20 + 10); // Random interval
 
     return () => clearInterval(interval);
   }, []);
@@ -107,7 +126,7 @@ const App = () => {
         <div className="md:columns-2">
           {/* Left Panel */}
           <div className="p-8 md:sticky md:top-0 md:col-span-1 md:h-screen">
-            <div className="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
+            <div id="Header" className="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
               <h1 className="text-4xl font-bold">Michael Yun</h1>
               <h2 className="text-xl font-medium mt-2">Full Stack Developer</h2>
               <h3 className="text-start text-base text-gray-400 mt-4">
@@ -176,21 +195,21 @@ const App = () => {
           </div>
           {/* Right Panel */}
           <div className="container overflow-y-scroll p-8"> 
-            <div ref={(el) => (sectionRefs.current["About"] = el)} id="About" className="min-h-screen flex flex-col justify-center items-start text-gray-100 px-4 py-4">
-              <h2 className="text-xl font-medium mt-2 uppercase">About</h2>
-              <h3 className="text-base mt-4 text-gray-400 text-start">
+            <div ref={(el) => (sectionRefs.current["About"] = el)} id="About" className="text-overlay min-h-screen flex flex-col justify-center items-start text-gray-100 px-4 py-4">
+              <h2 className="text-overlay text-xl font-medium mt-2 uppercase">About</h2>
+              <h3 className="text-overlay text-base mt-4 text-gray-400 text-start">
                 I'm a dedicated US citizen software engineer with a strong focus on creating 
                 dynamic web applications and captivating data visualizations.
                 I specialize in designing visually stunning, user-friendly interfaces that deliver
                 exceptional user experiences. I aim to bring innovation and excellence to every project I undertake.
               </h3>
-              <h3 className="text-base mt-4 text-gray-400 text-start">
+              <h3 className="text-overlay text-base mt-4 text-gray-400 text-start">
                 I have a statistics and computer science background, specializing in technologies like
                 React.js, AWS, ASP.NET Core, and R while equipped with a solid understanding of handling data. 
                 I've built scalable and reusable applications and 
                 dashboards which provided business insights to my teammates while saving them time and resources.  
               </h3>
-              <h3 className="text-base mt-4 text-gray-400 text-start">
+              <h3 className="text-overlay text-base mt-4 text-gray-400 text-start">
                 In my free time, I enjoy cosplaying with my friends, tinkering with 3D printing and Arduino-based cosplay props,
                 practicing guitar, and chasing personal records at the gym.
               </h3>

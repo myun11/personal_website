@@ -39,14 +39,19 @@ main {
 }
 
 .star {
-  position: absolute;
+  position: fixed;
   z-index: -.5;
   width: 4px;
   height: 4px;
   background-color: #00b8e6;
   border-radius: 50%;
   opacity: 0;
+  /* transition: filter 0.3s ease, opacity 0.3s ease; */
   animation: shoot 3s ease-in-out forwards, fadeIn 3s ease-in-out forwards;
+}
+
+.star.blur {
+  filter: blur(0.5rem) brightness(90%); /* Apply blur and darken effect */
 }
 
 @keyframes shoot {
