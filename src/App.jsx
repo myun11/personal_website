@@ -10,7 +10,10 @@ import ShortcutIcon from '@mui/icons-material/ArrowOutward';
 import './App.css'
 import Bubble from './components/Bubble';
 import Radio from './components/Radio';
-import Resume from './Yun_Michael_Full_Stack_Developer.pdf';
+
+// assets
+import Resume from './assets/Yun_Michael_Full_Stack_Developer.pdf';
+import GenshinDemo from './assets/genshin-demo.webp';
 
 import React, { useState, useEffect, useRef } from 'react'
 
@@ -124,10 +127,10 @@ const App = () => {
 
   return (
     <main className="w-full h-full bg-[#0b1228]">
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row 2xl:w-1/2 2xl:mx-auto">
         <div className="md:w-1/2 items-center justify-center">
           {/* Left Panel */}
-          <div className="p-2 items-center justify-center justify-items-center md:sticky md:top-0 md:h-screen">
+          <div className="md:align-middle p-2 items-center justify-center justify-items-center md:sticky md:top-0 md:h-screen">
             <div id="Header" className="md:text-end text-gray-100 px-4 py-4">
               <h1 className="text-6xl font-bold">Michael Yun</h1>
               <h2 className="text-xl font-medium mt-2">Full Stack Developer</h2>
@@ -197,30 +200,30 @@ const App = () => {
                 </Tooltip>
               </span>
             </div>
-            <div className="max-md:hidden flex flex-col text-end">
+            <div className="max-md:hidden flex flex-col items-end text-end">
               <Radio
                 nav = {nav}
                 setNav = {setNav}
               />
             </div>
-
           </div>
         </div>
         <div className="md:w-1/2">
           {/* Right Panel */}
           <div className="p-4 container overflow-y-scroll"> 
-            <div ref={(el) => (sectionRefs.current["About"] = el)} id="About" className="text-overlay min-h-screen flex flex-col justify-center items-start text-gray-100 px-4 py-4">
+            <div ref={(el) => (sectionRefs.current["About"] = el)} id="About" className="text-overlay md:min-h-screen flex flex-col justify-center items-start text-gray-100 px-4 py-4">
               <h2 className="text-overlay text-xl font-medium uppercase">About</h2>
               <h3 className="text-overlay text-base mt-4 text-gray-400 text-start">
-                I'm a dedicated US citizen software engineer with a strong focus on creating 
+                I am a dedicated US citizen software engineer with a strong focus on creating 
                 dynamic web applications and captivating data visualizations.
                 I specialize in designing visually stunning, user-friendly interfaces that deliver
-                exceptional user experiences. I aim to bring innovation and excellence to every project I undertake.
+                exceptional user experiences.
+                My passion includes bringing innovation and excellence to every project I undertake.
               </h3>
               <h3 className="text-overlay text-base mt-4 text-gray-400 text-start">
                 I have a statistics and computer science background, specializing in technologies like
                 React.js, AWS, ASP.NET Core, and R while equipped with a solid understanding of handling data. 
-                I've built scalable and reusable applications and 
+                My past products focused on scalable and reusable applications and 
                 dashboards which provided business insights to my teammates while saving them time and resources.  
               </h3>
               <h3 className="text-overlay text-base mt-4 text-gray-400 text-start">
@@ -352,6 +355,9 @@ const App = () => {
                   <Bubble text="Responsive Design"/>
                   <Bubble text="Figma"/>
                   <Bubble text="Git"/>
+                </div>
+                <div className="p-4">
+                  <img src={GenshinDemo} alt="Genshin Impact Web App" className="w-full h-auto" />
                 </div>
               </div>
               <div className ="text-start my-4">
