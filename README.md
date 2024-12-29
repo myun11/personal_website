@@ -44,7 +44,7 @@ To run this project locally:
 
 ## Contributing
 
-This project is primarily for personal use and professional growth. Contributions are currently not being accepted.
+This project is primarily for personal use and professional growth. However, feel free to fork the repository, explore the codebase, and star it if you find it useful!
 
 ## Acknowledgments
 
