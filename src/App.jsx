@@ -214,7 +214,7 @@ const App = () => {
             <div ref={(el) => (sectionRefs.current["About"] = el)} id="About" className="text-overlay md:min-h-screen flex flex-col justify-center items-start text-gray-100 px-4 py-4">
               <h2 className="text-overlay text-xl font-medium uppercase">About</h2>
               <h3 className="text-overlay text-base mt-4 text-gray-400 text-start">
-                I am a dedicated US citizen software engineer with a strong focus on creating 
+                I am a dedicated US citizen software engineer located in Northern Virginia with a strong focus on creating 
                 dynamic web applications and captivating data visualizations.
                 I specialize in designing visually stunning, user-friendly interfaces that deliver
                 exceptional user experiences.
