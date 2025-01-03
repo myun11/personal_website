@@ -301,6 +301,7 @@ const App = () => {
                 <div className="mt-2 mb-2 flex flex-wrap">
                   <Bubble text="React"/>
                   <Bubble text="AWS"/>
+                  <Bubble text="Redux"/>
                   <Bubble text="Node.js"/>
                   <Bubble text="MaterialUI"/>
                   <Bubble text="RESTful APIs"/>
