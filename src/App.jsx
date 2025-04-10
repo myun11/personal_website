@@ -1,7 +1,7 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import DownloadIcon from '@mui/icons-material/Download';
+// import InstagramIcon from '@mui/icons-material/Instagram';
+// import LinkedInIcon from '@mui/icons-material/LinkedIn';
+// import DownloadIcon from '@mui/icons-material/Download';
 import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
 import EmailIcon from '@mui/icons-material/Email';
@@ -12,10 +12,10 @@ import Bubble from './components/Bubble';
 import Radio from './components/Radio';
 
 // assets
-import Resume from './assets/Yun_Michael_Full_Stack_Developer.pdf';
+// import Resume from './assets/Yun_Michael_Full_Stack_Developer.pdf';
 import GenshinDemo from './assets/genshin-demo.webp';
 
-import React, { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 const App = () => {
   function createStar() {
@@ -132,10 +132,10 @@ const App = () => {
           {/* Left Panel */}
           <div className="md:align-middle p-2 items-center justify-center justify-items-center md:sticky md:top-0 md:h-screen">
             <div id="Header" className="md:text-end text-gray-100 px-4 py-4">
-              <h1 className="text-6xl font-bold">Michael Yun</h1>
+              <h1 className="text-6xl font-bold">Mike Yun</h1>
               <h2 className="text-xl font-medium mt-2">Full Stack Developer</h2>
               <h3 className="md:text-end text-base text-gray-400 mt-4">
-                I'm the one staying up late, turning ideas into innovative, seamless solutions.
+                I am the one staying up late, turning ideas into innovative, seamless solutions.
               </h3>
               <span className="mt-4">
                 <Tooltip title="GitHub">
@@ -150,7 +150,7 @@ const App = () => {
                     </IconButton>
                   </Link>
                 </Tooltip>
-                <Tooltip title="LinkedIn">
+                {/* <Tooltip title="LinkedIn">
                   <Link
                     href="https://www.linkedin.com/in/michael-yun-6562a3207/"
                     rel="noopener"
@@ -161,8 +161,8 @@ const App = () => {
                       <LinkedInIcon sx={{ color: 'white', '&:hover': { color: 'lightgray' } }} />
                     </IconButton>
                   </Link>
-                </Tooltip>
-                <Tooltip title="Instagram">
+                </Tooltip> */}
+                {/* <Tooltip title="Instagram">
                   <Link
                     href="https://www.instagram.com/heybbyitsmichael/"
                     rel="noopener"
@@ -173,10 +173,11 @@ const App = () => {
                       <InstagramIcon sx={{ color: 'white', '&:hover': { color: 'lightgray' } }} />
                     </IconButton>
                   </Link>
-                </Tooltip>
+                </Tooltip> */}
                 <Tooltip title="Email Me">
                   <Link
-                    href="mailto:yun.michael.ds@gmail.com"
+                    // href="mailto:yun.michael.ds@gmail.com"
+                    href="mailto:mike.yun.va@gmail.com"
                     target="_blank"
                     rel="noopener"
                     underline="none"
@@ -186,7 +187,7 @@ const App = () => {
                     </IconButton>
                   </Link>
                 </Tooltip>
-                <Tooltip title="Download Resume">
+                {/* <Tooltip title="Download Resume">
                   <Link
                     href= {Resume}
                     target="_blank"
@@ -197,7 +198,7 @@ const App = () => {
                       <DownloadIcon sx={{ color: 'white', '&:hover': { color: 'lightgray' } }} />
                     </IconButton>
                   </Link>
-                </Tooltip>
+                </Tooltip> */}
               </span>
             </div>
             <div className="max-md:hidden flex flex-col items-end text-end">
@@ -222,12 +223,12 @@ const App = () => {
               </h3>
               <h3 className="text-overlay text-base mt-4 text-gray-400 text-start">
                 I have a statistics and computer science background, specializing in technologies like
-                React.js, AWS, ASP.NET Core, and R while equipped with a solid understanding of handling data. 
+                Angular, React, Drupal, AWS, Spring Boot, and R while equipped with a solid understanding of handling data. 
                 My past products focused on scalable and reusable applications and 
                 dashboards which provided business insights to my teammates while saving them time and resources.  
               </h3>
               <h3 className="text-overlay text-base mt-4 text-gray-400 text-start">
-                In my free time, I enjoy cosplaying with my friends, tinkering with 3D printing and Arduino-based cosplay props,
+                In my free time, I tinkering with 3D printing and Arduino-based cosplay props,
                 practicing guitar, and chasing personal records at the gym.
               </h3>
             </div>
