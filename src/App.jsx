@@ -215,103 +215,100 @@ const App = () => {
             <div ref={(el) => (sectionRefs.current["About"] = el)} id="About" className="text-overlay md:min-h-screen flex flex-col justify-center items-start text-gray-100 px-4 py-4">
               <h2 className="text-overlay text-xl font-medium uppercase">About</h2>
               <h3 className="text-overlay text-base mt-4 text-gray-400 text-start">
-                I am a dedicated US citizen software engineer with a strong focus on creating 
-                dynamic web applications and captivating data visualizations.
-                I specialize in designing visually stunning, user-friendly interfaces that deliver
-                exceptional user experiences.
-                My passion includes bringing innovation and excellence to every project I undertake.
+                Hi, I’m Mike Yun — a Senior Software Engineer passionate about building fast, accessible, and scalable apps that make a real impact. With 8 years of experience across healthcare, government, and SaaS, I specialize in Angular frontends and AWS-powered backends. I’m always open to new ideas, great teams, and meaningful work — let’s connect and build something amazing.
               </h3>
               <h3 className="text-overlay text-base mt-4 text-gray-400 text-start">
-                I have a statistics and computer science background, specializing in technologies like
-                Angular, React, Drupal, AWS, Spring Boot, and R while equipped with a solid understanding of handling data. 
-                My past products focused on scalable and reusable applications and 
-                dashboards which provided business insights to my teammates while saving them time and resources.  
-              </h3>
+                I specialize in crafting clean, responsive, and accessible frontends using Angular, Tailwind, and Material Design. From micro-frontend architecture to dynamic data visualizations and WCAG-compliant UIs, I focus on delivering fast, intuitive experiences that look great and perform even better across devices and user needs.</h3>
               <h3 className="text-overlay text-base mt-4 text-gray-400 text-start">
-                In my free time, I tinkering with 3D printing and Arduino-based cosplay props,
-                practicing guitar, and chasing personal records at the gym.
+                When I’m not coding, I’m usually playing guitar, experimenting in the kitchen, or meeting new people at local events, meetups, and conventions.
               </h3>
             </div>
 
             <div ref={(el) => (sectionRefs.current["Experience"] = el)} id="Experience" className="min-h-screen flex flex-col items-start text-gray-100 px-4 py-4">
               <h2 className="text-xl font-medium mt-2 uppercase py-4">Experience</h2>
               <div className ="text-start my-4">
-                <p className="text-sm text-gray-400">2023 - Present</p>
+                <p className="text-sm text-gray-400">Feb 2024 - Present</p>
                 <h2 className="pb-4">
-                  <Tooltip title="Company Link">
-                    <Link
-                      href="https://eliteprep.com/"
-                      target="_blank"
-                      rel="noopener"
-                      underline="none"
-                    >
-                      <p className="text-gray-100">SAT/AP College Prep Tutor - Elite Prep
-                      <ShortcutIcon fontSize="small" sx={{
-                        color: 'white',
-                        '&:hover': { color: 'lightgray' }
-                      }}/>
-                      </p>
-                    </Link>
-                  </Tooltip>
+                  <p className="text-gray-100">ClearDx - Diagnostic Data Platform </p>
                 </h2>
                 <div className="text-start text-gray-400">
-                  Lead and form relationships with students and parents on structured class programs.
-                  Identify critical struggle points in lesson plans and manage time accordingly.
-                  Provide constructive feedback while tracking weekly improvements.
+                  I helped build a platform that lets scientists and lab techs view diagnostic test results in real time. I focused on frontend performance and modularity using Angular micro-frontends, while also designing serverless backend workflows on AWS to handle high-volume data securely and efficiently.
                 </div>
                 <div className="mt-2 mb-2 flex flex-wrap">            
-                  <Bubble text="Presentation"/>
-                  <Bubble text="Communication"/>
-                  <Bubble text="Mentoring"/>
-                  <Bubble text="Customer Service"/>
-                  <Bubble text="Computer Science"/>
-                  <Bubble text="Calculus 1-3"/>
-                  <Bubble text="SAT Math"/>
-                  <Bubble text="Statistics"/>
-                  <Bubble text="Physics"/>
+                  <Bubble text="Angular"/>
+                  <Bubble text="Module Federation"/>
+                  <Bubble text="AWS Lambda"/>
+                  <Bubble text="DynamoDB"/>
+                  <Bubble text="PostgreSQL"/>
+                  <Bubble text="Cognito"/>
+                  <Bubble text="NgRx"/>
+                  <Bubble text="Accessibility"/>
+                  <Bubble text="CI/CD"/>
                 </div>
               </div>
               <div className="text-start my-4">
-                <p className="text-sm text-gray-400">2021 - 2022</p>
+                <p className="text-sm text-gray-400">Feb 2021 - Dec 2023</p>
                 <h2 className="pb-4">
-                  <Tooltip title="Company Link">
-                    <Link
-                      href="https://attainx.com/"
-                      target="_blank"
-                      rel="noopener"
-                      underline="none"
-                    >
-                      <p className="text-gray-100">Full Stack Developer - AttainX                    
-                      <ShortcutIcon fontSize="small" sx={{
-                        color: 'white',
-                        '&:hover': { color: 'lightgray' }
-                      }}/>
-                      </p>
-                      
-                    </Link>
-                  </Tooltip>
+                  <p className="text-gray-100">ICYou - Incident Reporting Platform </p>
                 </h2>
-
                 <div className="text-start text-gray-400">
-                  Built and deployed scalable solutions in an Agile environment to deliver innovative, data driven analytics and business insights.
-                  Collaborated with local civilian and federal clients to achieve digital modernization goals.
-                  Worked closely with cross-functional teams including Product Managers, Scrum Master, UI/UX Designer,
-                  Cloud Engineer, Business Intelligence, and Business Analyst.
+                  ICYou is a multi-tenant reporting platform used by federal agencies to track and analyze incidents. I built a responsive, real-time dashboard using Angular and D3.js, with support for dynamic theming and secure user management. The system helped visualize critical data with clarity and speed.
                 </div>
-
-                <div className="mt-2 mb-2 flex flex-wrap">
+                <div className="mt-2 mb-2 flex flex-wrap">            
+                  <Bubble text="Angular"/>
+                  <Bubble text="D3.js"/>
+                  <Bubble text="NgRx"/>
+                  <Bubble text="Cognito"/>
+                  <Bubble text="JWT"/>
+                  <Bubble text="REST APIs"/>
+                  <Bubble text="Dynamic Theming"/>
+                  <Bubble text="Virtual Scrolling"/>
+                  <Bubble text="Secure Auth"/>
+                  <Bubble text="State Management"/>
+                </div>
+                
+                {/* React - AWS - Node.js - .NET - MaterialUI
+                AWS Lambda, DynamoDB, S3, ReactJS, Postman */}
+              </div>
+              <div className="text-start my-4">
+                <p className="text-sm text-gray-400">Feb 2019 - Dec 2020</p>
+                <h2 className="pb-4">
+                  <p className="text-gray-100">CPI – Patent Management Portal</p>
+                </h2>
+                <div className="text-start text-gray-400">
+                  At CPI, I built a web platform to help organizations track and manage patent renewals. Using React and PostgreSQL, I developed intuitive, responsive pages and optimized backend APIs to support high-volume datasets. My work improved visibility and control over time-sensitive IP assets.                </div>
+                <div className="mt-2 mb-2 flex flex-wrap">            
                   <Bubble text="React"/>
-                  <Bubble text="AWS"/>
-                  <Bubble text="Redux"/>
-                  <Bubble text="Node.js"/>
-                  <Bubble text="MaterialUI"/>
-                  <Bubble text="RESTful APIs"/>
-                  <Bubble text="Microservices"/>
-                  <Bubble text="Data Visualization"/>
-                  <Bubble text="CI/CD Pipelines"/>
+                  <Bubble text="PostgreSQL"/>
+                  <Bubble text="Tailwind CSS"/>
+                  <Bubble text="REST APIs"/>
+                  <Bubble text="JWT"/>
+                  <Bubble text="Responsive Design"/>
+                  <Bubble text="Pagination"/>
                   <Bubble text="Agile"/>
-                  <Bubble text="Authentication"/>
-                  <Bubble text="Authorization"/>
+                  <Bubble text="UX Design"/>
+                </div>
+                
+                {/* React - AWS - Node.js - .NET - MaterialUI
+                AWS Lambda, DynamoDB, S3, ReactJS, Postman */}
+              </div>
+              <div className="text-start my-4">
+                <p className="text-sm text-gray-400">May 2017 - Jan 2019</p>
+                <h2 className="pb-4">
+                  <p className="text-gray-100">Enterprise E-learning Platform </p>
+                </h2>
+                <div className="text-start text-gray-400">
+                I developed a modular learning platform where companies could create interactive courses and quizzes. Using Angular and MySQL, I focused on clean UI, component reuse, and OAuth-based authentication. The platform supported SCORM/LTI standards and was tailored for corporate training.                </div>
+                <div className="mt-2 mb-2 flex flex-wrap">            
+                  <Bubble text="Angular"/>
+                  <Bubble text="Bootstrap"/>
+                  <Bubble text="MySQL"/>
+                  <Bubble text="OAuth 2.0"/>
+                  <Bubble text="SCORM/LTI"/>
+                  <Bubble text="Lazy Loading"/>
+                  <Bubble text="Docker"/>
+                  <Bubble text="Unit Testing"/>
+                  <Bubble text="Component Libraries"/>
                 </div>
                 
                 {/* React - AWS - Node.js - .NET - MaterialUI
@@ -362,7 +359,7 @@ const App = () => {
                   <img src={GenshinDemo} alt="Genshin Impact Web App" className="w-full h-auto" />
                 </div>
               </div>
-              <div className ="text-start my-4">
+              {/* <div className ="text-start my-4">
                 <p className="text-sm text-gray-400">2021</p>
                 <h2 className="">
                   <Tooltip title="Project Link">
@@ -398,13 +395,13 @@ const App = () => {
                     <Bubble text="corrplot"/>
                   </div>
                 </h2>
-              </div>
+              </div> */}
             </div>
 
             <div ref={(el) => (sectionRefs.current["Education"] = el)} id="Education" className ="flex flex-col justify-center items-start text-gray-100 px-4 py-4">
               <h2 className="text-xl font-medium mt-2 uppercase">Education</h2>
               <div className ="text-start my-4">
-                <p className="text-sm text-gray-400">2017-2021</p>
+                {/* <p className="text-sm text-gray-400">2017-2021</p> */}
                 <h2 className="">
                   <Tooltip title="University Link">
                     <Link
@@ -426,8 +423,8 @@ const App = () => {
                   University of Illinois Urbana-Champaign
                   </div>
                   <div className="mt-2 mb-2 flex flex-wrap">
-                    <Bubble text="Java"/>           
-                    <Bubble text="Python"/>           
+                    <Bubble text="Java"/>         
+                    <Bubble text="Python"/>         
                     <Bubble text="C++"/>
                     <Bubble text="R"/>
                     <Bubble text="Object Oriented Programming"/>
