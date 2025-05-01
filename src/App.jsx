@@ -215,10 +215,16 @@ const App = () => {
             <div ref={(el) => (sectionRefs.current["About"] = el)} id="About" className="text-overlay md:min-h-screen flex flex-col justify-center items-start text-gray-100 px-4 py-4">
               <h2 className="text-overlay text-xl font-medium uppercase">About</h2>
               <h3 className="text-overlay text-base mt-4 text-gray-400 text-start">
-                Hi, I’m Mike Yun — a Senior Software Engineer passionate about building fast, accessible, and scalable apps that make a real impact. With 8 years of experience across healthcare, government, and SaaS, I specialize in Angular frontends and AWS-powered backends. I’m always open to new ideas, great teams, and meaningful work — let’s connect and build something amazing.
+                Hi, I’m Mike Yun — a Senior Software Engineer passionate about building fast, accessible, and 
+                scalable apps that make a real impact. With 8 years of experience across healthcare, government, 
+                and SaaS, I specialize in Angular + React frontends and AWS-powered backends. 
+                I’m always open to new ideas, great teams, and meaningful work — let’s connect and build something amazing.
               </h3>
               <h3 className="text-overlay text-base mt-4 text-gray-400 text-start">
-                I specialize in crafting clean, responsive, and accessible frontends using Angular, Tailwind, and Material Design. From micro-frontend architecture to dynamic data visualizations and WCAG-compliant UIs, I focus on delivering fast, intuitive experiences that look great and perform even better across devices and user needs.</h3>
+                I specialize in crafting clean, responsive, and accessible frontends using Angular, Tailwind, and Angular Material. 
+                From micro-frontend architecture to dynamic data visualizations and WCAG-compliant UIs, 
+                I focus on delivering fast, intuitive experiences that look great and perform even better across devices and user needs.
+                </h3>
               <h3 className="text-overlay text-base mt-4 text-gray-400 text-start">
                 When I’m not coding, I’m usually playing guitar, experimenting in the kitchen, or meeting new people at local events, meetups, and conventions.
               </h3>
@@ -232,14 +238,18 @@ const App = () => {
                   <p className="text-gray-100">ClearDx - Diagnostic Data Platform </p>
                 </h2>
                 <div className="text-start text-gray-400">
-                  I helped build a platform that lets scientists and lab techs view diagnostic test results in real time. I focused on frontend performance and modularity using Angular micro-frontends, while also designing serverless backend workflows on AWS to handle high-volume data securely and efficiently.
+                  I helped build a platform that lets scientists and lab techs view diagnostic test results 
+                  in real time. I focused on frontend performance and modularity using Module Federation and Nx for seamless microfrontend design
+                  while also designing serverless backend workflows on AWS to handle high-volume data securely and efficiently.
                 </div>
                 <div className="mt-2 mb-2 flex flex-wrap">            
                   <Bubble text="Angular"/>
+                  <Bubble text="React"/>
+                  <Bubble text="Zerto"/>
                   <Bubble text="Module Federation"/>
+                  <Bubble text="Nx"/>
                   <Bubble text="AWS Lambda"/>
                   <Bubble text="DynamoDB"/>
-                  <Bubble text="PostgreSQL"/>
                   <Bubble text="Cognito"/>
                   <Bubble text="NgRx"/>
                   <Bubble text="Accessibility"/>
